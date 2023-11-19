@@ -1,0 +1,299 @@
+/* 큰 영문 font-family: 'Ubuntu', sans-serif; */
+/* 큰 영문 font-family: 'Poppins', sans-serif; */
+/* 영문 font font-family: 'Open Sans', sans-serif;  */
+/* 한글 font font-family: 'Gothic A1', sans-serif */
+/* 이모지 font font-family: 'Noto Sans KR', sans-serif; */
+
+body {
+    margin: 0;
+    font-family: 'Gothic A1', sans-serif;
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 배경영역 */
+#main-background {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #eaeaea 15%, #FFFFD2 65%, #d1f7ff 100%);
+    background-size: 200% 200%;
+    position: relative;
+    animation: gradient 7s ease-in-out infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 100% 100%;
+    }
+    25% {
+        background-position: 50% 50%;
+    }
+    50% {
+        background-position: 0% 0%;
+    }
+    75% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+#background-caption {
+    position: absolute;
+    font-size: 140px;
+    /* font-family: 'Ubuntu', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+}
+#background-caption > p {
+    margin: 0;
+    line-height: 0;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.4);
+    -webkit-text-stroke: 1px #000;
+}
+#background-caption > p:first-child {
+    opacity: 0;
+    /* transform: translate(52px, 459px); */
+}
+#background-caption > p:nth-child(2) {
+    opacity: 0;
+    /* transform: translate(143px, 615px); */
+    animation: move-caption1 2s ease both;
+    animation-delay: .5s;
+}
+#background-caption > p:last-child {
+    opacity: 0;
+    /* transform: translate(811px, 756px); */
+    animation: move-caption2 2s ease both;
+    animation-delay: .3s;
+}
+@keyframes move-caption1 {
+    0% {
+        transform:translate(-200px, 615px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(143px, 615px);
+        opacity: 1;
+    }
+}
+@keyframes move-caption2 {
+    0% {
+        transform:translate(100%, 756px);
+        opacity: 0;
+    }
+    50% {
+        transform:translate(100%, 756px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(811px, 756px);
+        opacity: 1;
+    }
+}
+
+
+
+#index-start {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#index-start p {
+    color: #fff;
+    font-size: 50px;
+}
+#index-start #index-start-bg {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* z-index: 9999; */
+}
+#index-start:hover #index-start-bg {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+
+
+#main-container {
+    width: 100%;
+    position: absolute;
+}
+
+
+/* nav 영역 */
+
+nav>#main-nav {
+    list-style: none;
+    width: 150px;
+    /* background: #000; */
+    position: fixed;
+    z-index: 9999;
+    top: 50px;
+    right: 50px;
+}
+
+nav>#main-nav>li {
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav>#main-nav .nav-img-menu {
+    font-size: 80px;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, .1);
+    font-family: 'Noto Color Emoji', sans-serif;
+}
+
+nav>#main-nav li:hover .nav-img-menu {
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, .3);
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+}
+
+nav>#main-nav a {
+    font-size: 18px;
+    font-weight: 400;
+    /* font-style: italic; */
+    text-decoration: none;
+    color: #000;
+    line-height: 50px;
+    font-family: 'Open Sans','Gothic A1', sans-serif;
+}
+
+/* section-header 영역 */
+#section-1-wrapper {
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+    top: 145px;
+    left: 420px;
+    /* margin: 0 auto; */
+}
+
+#section-1-title {
+    width: 1000px;
+    height: 65px;
+    background-color: rgba(0, 0, 0, .2);
+
+    position: absolute;
+    top: 0;
+    z-index: 10;
+
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    text-align: center;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#section-1-title #section-nav {
+    width: 100em;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#section-1-title > #section-nav > p {
+    background-color: rgba(255, 255, 255, .6);
+    padding: 4px 60px;
+    border-radius: 20px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0 auto;
+    transform: translateX(-27px);
+}
+#section-1-title #section-nav > ul {
+    padding-inline-start: 20px;
+}
+#section-1-title #section-nav button {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: none;
+}
+
+#section-1-title #section-nav button:first-child:hover {
+    background-color: rgb(255, 96, 96);
+}
+
+#section-1-title #section-nav button:nth-child(2):hover {
+    background-color: rgb(255, 217, 0);
+}
+
+#section-1-title #section-nav button:last-child:hover {
+    background-color: rgb(80, 144, 80);
+}
+
+
+
+
+#section-1 {
+    width: 1000px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, .3);
+    box-shadow: 0 0 100px rgba(0, 0, 0, .15);
+    border-radius: 25px;
+    
+    position: absolute;
+    top: 0;
+    
+    display: flex;
+    align-items: center;
+}
+#section-1:hover {
+    box-shadow: 0 0 100px rgba(0, 0, 0, .25);
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+    
+}
+#section-1 #section-1-introduce {
+    width: 600px;
+    margin-left: 50px;
+    transform: translate(0, -50px);
+}
+#section-1 p {
+    width: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 65px;
+    line-height: 20px;
+}
+.kor-font-weight-light {
+    font-weight: 100;
+}
+.kor-font-weight-bold {
+    font-weight: 500;
+}
+
+
+.about-me-container-display-none {
+    background-color: #fff;
+    transform: translateY(100%);
+    display: none;
+}
+
+.display-block {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 99999;
+    transform: translateY(-100%);
+}
