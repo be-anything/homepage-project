@@ -1,68 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AboutMe</title>
+    <title>Aboutme</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,700;1,900&family=Ubuntu:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,700;1,900&family=Ubuntu:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/about-me.css">
+    <style>
+        
+    </style>
+    <script src="https://kit.fontawesome.com/10d89693f5.js" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
     <div id="main-background">
-        <div id="main-container">
-            <nav>
-                <h1 id="main-nav-title">
-                    📌open menu📌
-                    <div class="under-line"></div>
-                </h1>
-                <ul id="main-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="">travel-log</a></li>
-                    <li><a href="">road-map</a></li>
-                    <li><a href="">join</a></li>
-                </ul>
-            </nav>
-            <div id="section-1-wrapper">
-                <header id="section-1-title">
-                    <h1>Introduce page</h1>
-                </header>
-                <section id="section-1">
-                    <div id="section-1-introduce">
-                    </div>
-                </section>
+        <header id="main-header">
+            <ul id="nav-icon" onclick="showHideNavMenu();">
+                <li class="logo-bar"></li>
+                <li class="logo-bar"></li>
+                <li class="logo-bar"></li>
+            </ul>
+            <div id="homepage-logo" onclick="location.href='index.html'">
+                <div class="circle circle1"></div>
+                <div class="circle circle2"></div>
+                <h1>MINJEONG</h1>
             </div>
-            <div id="aside-wrapper">
+            <p>
+                <a href="login.html">
+                    login
+                    <div class="under-line"></div>
+                </a>
+            </p>
+        </header>
+        <nav id="main-nav" class="nav-hide-position">
+            <ul id="nav-hide">
+                <ul id="close-icon" onclick="showHideNavMenu();">
+                    <li class="logo-bar"></li>
+                    <li class="logo-bar"></li>
+                </ul>
+                <li>
+                    <a href="about-me.html">about-me</a>
+                    <div class="under-line"></div>
+                </li>
+                <li>
+                    <a href="travel-log.html">travel-log</a>
+                    <div class="under-line"></div>
+                </li>
+                <li>
+                    <a href="road-map.html">road-map</a>
+                    <div class="under-line"></div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div id="main-container">
+        <div id="section-1-wrapper">
+            <header id="section-1-title">
+                <h1>Introduce page</h1>
+            </header>
+            <section id="section-1">
+                <div id="section-1-introduce">
+                    <h3>안녕하세요, 저는 <span>백엔드 개발자</span> 취업을 준비하는 이민정입니다.</h3>
+                    <p>어설픈 제 홈페이지에 방문해주셔서 감사합니다 !
+                    <br>낯선 공부를 하려니 쉽지 않지만, 나름대로 열심히 하고 있는 중입니다.
+                    <br>아직은 부족하지만 이 과정의 마지막에는 개발자로서
+                    <br>첫 스타트를 끊을 수 있었으면 좋겠습니다.</p>
+                </div>
+                <div id="section-1-introduce-tag">
+                    <p>#화학전공</p>
+                    <p>#INFP #INTP</p>
+                    <p>#매일졸려요</p>
+                    <p>#서울동작구</p>
+                </div>
+            </section>
+        </div>
+        <div id="aside-wrapper">
             <aside>
                 <section>
                     <div id="bg-circle"></div>
-                    <h1>Lee-<br>Minjeong</h1>
+                    <h1>Contact</h1>
                     <ul>
                         <li>
-                            <div class="aside-menu-img">📱</div>
+                            <div class="aside-menu-img">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
                             <p>010-2532-6864</p>
                         </li>
                         <li>
-                            <div class="aside-menu-img">📧</div>
-                            <p>snailmin27@gmail.com</p>
+                            <div class="aside-menu-img">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <p><a href="">snailmin27@gmail.com</a></p>
                         </li>
                         <li>
-                            <div class="aside-menu-img">🗂️</div>
-                            <p>github.com/be-anything</p>
+                            <div class="aside-menu-img">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                            <p><a href="">github.com/be-anything</a></p>
                         </li>
                         <li>
-                            <div class="aside-menu-img">📝</div>
-                            <p>snailmin.notion.site</p>
+                            <div class="aside-menu-img">
+                                <i class="fa-solid fa-book"></i>
+                            </div>
+                            <p><a href="">snailmin.notion.site</a></p>
                         </li>
                     </ul>
                 </section>
             </aside>
         </div>
+        <div id="face-icon-wrap">
+            <img src="image/mimo.png" alt="고민하는 미모티콘">
         </div>
+
     </div>
+        <script src="js/index.js"></script>
 </body>
+
 </html>

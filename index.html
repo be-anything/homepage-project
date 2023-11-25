@@ -8,62 +8,75 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,700;1,900&family=Ubuntu:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    
     <div id="main-background">
-        <div id="main-container">
-            <nav>
-                <ul id="main-nav">
-                    <li><a href="about-me.html"><span class="nav-img-menu">📒</span><br>about-me</a></li>
-                    <li><a href=""><span class="nav-img-menu">🌏</span><br>travel-log</a></li>
-                    <li><a href=""><span class="nav-img-menu">🎯</span><br>road-map</a></li>
-                    <li><a href=""><span class="nav-img-menu">📁</span><br>join</a></li>
-                </ul>
-            </nav>
-            <div id="section-1-wrapper">
-                <header id="section-1-title">
-                    <nav id="section-nav">
-                        <p>Backend-Developer</p>
-                        <ul>
-                            <button></button>
-                            <button></button>
-                            <button></button>
-                        </ul>
-                    </nav>
-                    
-                </header>
-                <section id="section-1">
-                    <div id="section-1-introduce">
-                        <p><span class="kor-font-weight-light">안녕하세요, 👩‍💻</span></p>
-                        <p><span class="kor-font-weight-bold">신입 개발자를 꿈꾸는</span></p>
-                        <p>
-                            <span class="kor-font-weight-bold">이민정</span>
-                            <span class="kor-font-weight-light">입니다.</span>
-                        </p>
-                    </div>
-                </section>
+        <header id="main-header">
+            <ul id="nav-icon" onclick="showHideNavMenu();">
+                <li class="logo-bar"></li>
+                <li class="logo-bar"></li>
+                <li class="logo-bar"></li>
+            </ul>
+            <div id="homepage-logo" onclick="location.href='index.html'">
+                <div class="circle circle1"></div>
+                <div class="circle circle2"></div>
+                <h1>MINJEONG</h1>
             </div>
-            <div id="background-caption">
-                <p>Hello,</p>
-                <p>Welcome to</p>
-                <p>My Website!</p>
+            <p>
+                <a href="login.html">
+                    login
+                    <div class="under-line"></div>
+                </a>
+            </p>
+        </header>
+        <nav id="main-nav" class="nav-hide-position">
+                <ul id="nav-hide">
+                    <ul id="close-icon" onclick="showHideNavMenu();">
+                        <li class="logo-bar"></li>
+                        <li class="logo-bar"></li>
+                    </ul>
+                    <li>
+                        <a href="about-me.html">about-me</a>
+                        <div class="under-line"></div>
+                    </li>
+                    <li>
+                        <a href="travel-log.html">travel-log</a>
+                        <div class="under-line"></div>
+                    </li>
+                    <li>
+                        <a href="road-map.html">road-map</a>
+                        <div class="under-line"></div>
+                    </li>
+                </ul>
+        </nav>
+
+        <div id="main-section-intro">
+            <div>
+                <div class="intro-bgc intro1"></div>
+                <h1 class="intro-bgc intro1">Welcome to</h1>
+                <h1>Welcome to</h1>
+            </div>
+            <div>
+                <div class="intro-bgc intro2"></div>
+                <h1 h1 class="intro-bgc intro2">My Homepage!</h1>
+                <h1>My Homepage!</h1>
             </div>
         </div>
 
-        <div class="about-me-container-display-none">
+        <div id="main-section">
+            <section>
+                <article>
+                    <div id="index-intro">
+                        <p>안녕하세요,</p>
+                        <p></p>
+                    </div>
+                </article>                
+            </section>
 
         </div>
     </div>
-
-    <!-- <div id="index-start">
-        <div>
-            <p>click me!</p>
-            <div id="index-start-bg">
-            </div>
-        </div>
-    </div> -->
 
     <script src="js/index.js"></script>
 </body>

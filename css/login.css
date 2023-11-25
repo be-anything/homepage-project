@@ -1,6 +1,7 @@
 /* 큰 영문 font-family: 'Ubuntu', sans-serif; */
 /* 큰 영문 font-family: 'Poppins', sans-serif; */
 /* 영문 font font-family: 'Open Sans', sans-serif;  */
+/* 한글 font font-family: 'Gothic A1', sans-serif */
 /* 이모지 font font-family: 'Noto Sans KR', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
 /* font-family: 'Montserrat Subrayada', sans-serif; */
@@ -261,6 +262,9 @@ nav ul#nav-hide > li .under-line {
     position: absolute;
     margin-top: 10px;
 }
+nav ul#nav-hide > li:hover {
+    color: #000;
+}
 nav ul#nav-hide > li:hover a{
     color: #000;
 }
@@ -284,123 +288,4 @@ nav ul#nav-hide > li:hover .under-line {
         width: 100%;
         opacity: 1;
     }
-}
-
-
-
-/* 내용부분 main title */
-#main-section-intro {
-}
-#main-section-intro div {
-}
-#main-section-intro div * {
-    font-family: 'Montserrat Subrayada', sans-serif;
-    font-size: 96px;
-}
-
-/* welcome to 부분 */
-#main-section-intro div:first-child {
-    width: 800px;
-    height: 80px;
-    position: relative;
-
-    transform: translate(200px, 50px);
-}
-#main-section-intro div:first-child * {
-    position: absolute;
-    top: 0;
-}
-#main-section-intro div:first-child h1 {
-    margin: 0;
-    color: #000;
-}
-#main-section-intro div h1.intro-bgc {
-    color: #fff;
-    transform: translate(5px, 2px);
-}
-#main-section-intro div div.intro1 {
-    width: 700px;
-    height: 80px;
-    background-color: #c1f20f;
-    transform: skew(-10deg) translate(20px, 40px);
-}
-#main-section-intro div:first-child h1:hover {
-    transform: translate(-5px, -2px);
-    transition-duration: .3s;
-    transition-timing-function: ease-in-out;
-    color: #0b30fb;
-}
-
-/* welcome to 부분 */
-#main-section-intro div:last-child {
-    width: 800px;
-    height: 80px;
-    position: relative;
-
-    transform: translate(900px, 545px);
-}
-#main-section-intro div:last-child * {
-    position: absolute;
-    top: 0;
-}
-#main-section-intro div:last-child h1 {
-    margin: 0;
-    color: #000;
-}
-#main-section-intro div:last-child h1.intro-bgc {
-    color: #fff;
-    transform: translate(5px, 2px);
-}
-#main-section-intro div:last-child div.intro2 {
-    width: 800px;
-    height: 80px;
-    background-color: #ff00a1;
-    transform: skew(-10deg) translate(0px, 40px);
-}
-#main-section-intro div:last-child h1:hover {
-    transform: translate(-5px, -2px);
-    transition-duration: .3s;
-    transition-timing-function: ease-in-out;
-    color: #0b30fb;
-}
-
-
-
-/* 내용부분 */
-#main-section {
-    width: 100%;
-    height: 600px;
-    margin: -50px auto 0;
-    background-color: rgba(0, 0, 0, 0.1);
-    color: #fff;
-    text-align: center;
-    /* border-top: 4px solid #000;
-    border-bottom: 4px solid #000; */
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* main-section 아래있는 글 */
-#main-section section{
-    width: 500px;
-    height: 500px;
-    /* background-color: #0b30fb; */
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-family: 'Noto Sans KR', sans-serif;
-    color: #000;
-
-    opacity: 0;
-}
-#main-section:hover section {
-    transition-duration: 1s;
-    opacity: 1;
-}
-#main-section section p {
-    font-size: 48px;
 }
