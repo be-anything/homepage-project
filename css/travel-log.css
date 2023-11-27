@@ -1,0 +1,168 @@
+body {
+    overflow-x: hidden;
+}
+#bg-title {
+    position: absolute;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 240px;
+    font-weight: 900;
+    color: rgba(0, 0, 0, .1);
+    transform: rotate(90deg);
+    right: -500px;
+    top: 500px;
+    z-index: -999;
+}
+#travel {
+    position: relative;
+    left: -10px;
+    width: 80vw;
+    /* background-color: red; */
+    margin: 100px auto;
+    border-top: 3px solid #000;
+}
+.travel-wrap {
+    /* width: 100vw; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    /* background-color: #000; */
+}
+.travel-left-wrap {
+    width: 50%;
+    height: 600px;
+    /* background-color: gray; */
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.travel-left-wrap .travel-log {
+    width: 600px;
+    height: 500px;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+}
+
+
+
+
+.travel-left-wrap .travel-log > div {
+    /* display: flex; */
+    width: 100%;
+    /* justify-content: space-evenly;
+    align-items: center; */
+}
+.travel-left-wrap .travel-log h2 {
+    margin: 10px auto;
+    width: fit-content;
+    font-size: 36px;
+    font-weight: 600;
+    background-color: #fff;
+    /* border-bottom: 4px solid #000; */
+}
+.travel-left-wrap .travel-log .h2-sub {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: #000;
+    color: #fff;
+    /* font-style: italic; */
+    /* text-align: right; */
+}
+.travel-left-wrap .travel-log h3 {
+    padding: 0;
+}
+
+
+
+
+/* img silder */
+.travel-right-wrap {
+    width: 50%;
+    height: 600px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.travel-right-wrap .travel-img-wrap {
+    width: 750px;
+    height: 500px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.travel-right-wrap .travel-img-wrap .travel-img-wrap-full {
+    width: fit-content;
+    display: flex;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+.travel-right-wrap .travel-img-wrap section {
+    width: 750px;
+    height: 500px;
+}
+.travel-right-wrap .travel-img-wrap section img {
+    width: 100%;
+}
+.travel-right-wrap .travel-img-wrap .img1 {
+    background-color: purple;
+}
+.travel-right-wrap .travel-img-wrap .img2 {
+    background-color: #fff;
+}
+.travel-right-wrap .travel-img-wrap .img3 {
+    background-color: green;
+}
+
+
+/* 개별 영역 css */
+.travel-log1 {
+    
+}
+.travel-log1 img:first-child{
+    height: 550px;
+}
+.travel-log2 {
+    flex-direction: row-reverse;
+}
+.travel-log3 {
+
+}
+
+
+
+
+
+
+
+
+
+
+/* btn 스타일 */
+.img-slider-btn-wrap {
+    width: 750px;
+    height: 50px;
+    background-color: #fff;
+}
+.img-slider-btn-wrap ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-slider-btn-wrap li {
+    cursor: pointer;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.img-slider-btn-wrap li:first-child {
+    background-color: #ff00a1;
+}
