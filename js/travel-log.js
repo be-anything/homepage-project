@@ -4,11 +4,7 @@ const addBtn1Click = (btn) => {btn.addEventListener('click', (e) => {
     slider.style.transform = `translateX(0px)`;
     
     // 스타일 바꾸기
-    const btns = [...document.querySelectorAll('.slider-btn')];
-    btns.forEach((e) => {
-        e.style['background-color'] = '#000';
-    });
-    e.target.style['background-color'] = '#ff00a1';
+    btnColor(e);
 })};
 
 [...document.querySelectorAll('.btn1')].forEach((btn) => {
@@ -20,11 +16,7 @@ const addBtn2Click = (btn) => {btn.addEventListener('click', (e) => {
     slider.style.transform = `translateX(-${slideWidth.offsetWidth}px)`;
     
     // 스타일 바꾸기
-    const btns = [...document.querySelectorAll('.slider-btn')];
-    btns.forEach((e) => {
-        e.style['background-color'] = '#000';
-    });
-    e.target.style['background-color'] = '#ff00a1';
+    btnColor(e);
 })};
 
 [...document.querySelectorAll('.btn2')].forEach((btn) => {
@@ -36,22 +28,18 @@ const addBtn3Click = (btn) => {btn.addEventListener('click', (e) => {
     slider.style.transform = `translateX(-${slideWidth.offsetWidth*2}px)`;
     
     // 스타일 바꾸기
-    const btns = [...document.querySelectorAll('.slider-btn')];
-    btns.forEach((e) => {
-        e.style['background-color'] = '#000';
-    });
-    e.target.style['background-color'] = '#ff00a1';
+    btnColor(e);
 })};
 
 [...document.querySelectorAll('.btn3')].forEach((btn) => {
     addBtn3Click(btn);
 });
 
+const btnColor = (e) => {
+    const btns = [...e.target.parentElement.children];
+    btns.forEach((btn) => {
+        btn.style.backgroundColor = '#000';
+    });
+    e.target.style.backgroundColor = '#ff00a1';
+};
 
-
-
-
-// body color event 
-document.querySelector('body').addEventListener('scroll', (e) => {
-    e.target.style['background-color'] = '#000';
-});

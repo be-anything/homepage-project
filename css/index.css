@@ -4,7 +4,9 @@
 /* 이모지 font font-family: 'Noto Sans KR', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
 /* font-family: 'Montserrat Subrayada', sans-serif; */
-
+html {
+    cursor: url("../image/navigation.png"), auto;
+}
 body {
     padding: 0;
     margin: 0;
@@ -26,7 +28,7 @@ header#main-header #homepage-logo {
     height: fit-content;
     font-family: 'Ubuntu', sans-serif;
     cursor: pointer;
-
+    
     transform: translate(-90px, 0);
 }
 header#main-header #homepage-logo h1 {
@@ -61,13 +63,13 @@ header#main-header #homepage-logo:hover h1 {
 }
 @keyframes logo-animation-h1 {
     0% {
-
+        
     }
     50% {
         color: #fff;
     }
     100% {
-
+        
     }
 }
 @keyframes logo-animation {
@@ -131,12 +133,12 @@ header #nav-icon {
     top: 30px;
     left: 20px;
     /* background-color: red; */
-
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-
+    
     cursor: pointer;
 }
 header #nav-icon > li {
@@ -196,11 +198,11 @@ nav ul#nav-hide {
     background-color: #0b30fb;
     position: absolute;
     top: 0;
-
+    
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     font-size: 36px;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
