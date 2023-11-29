@@ -9,13 +9,14 @@ div.i-wrap {
     /* border: 1px solid #0b30fb; */
     background-color: rgba(0, 0, 0, 0.1);
 
-    transform: translate(-10px, -6px);
+    transform: translate(-10px, -17px);
 }
 i {
     width: 50px;
     font-size: 20px;
     color: #000;
     text-align: center;
+    transform: translateY(15px);
 }
 
 body {
@@ -44,19 +45,29 @@ fieldset#join {
 }
 #join div {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin: 0 auto;
+
+    position: relative;
 }
 #join input {
-    padding: 20px 50px;
-    margin: 0 0 10px;
+    padding: 15px 50px;
+    margin: 0 0 30px;
     width: 300px;
     border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 30px;
+    font-size: 16px;
 }
 #join input::placeholder {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 16px;
+    /* font-weight: 400; */
+}
+#join input.short-input {
+    width: 50px;
+    padding: 15px 30px;
+    margin: 0 10px 30px;
+    text-align: center;
 }
 
 
@@ -74,4 +85,25 @@ fieldset#join {
 #join button:hover {
     background-color: #0b30fb;
     transition-duration: .3s;
+}
+
+sub {
+    display: none;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    color: #000;
+    font-weight: 600;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.required-sub {
+    /* display: none; */
+    color: red;
+}
+.regExpOk {
+    /* display: none; */
+    color: #0b30fb;
+}
+.regExpNo {
+    color: red;
 }
