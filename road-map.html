@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RoadMap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,700;1,900&family=Ubuntu:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/road-map.css" />
+    <script src="https://kit.fontawesome.com/10d89693f5.js" crossorigin="anonymous"></script
+  </head>
+  <body>
+    <div id="main-background">
+      <header id="main-header">
+        <ul id="nav-icon" onclick="showHideNavMenu();">
+          <li class="logo-bar"></li>
+          <li class="logo-bar"></li>
+          <li class="logo-bar"></li>
+        </ul>
+        <div id="homepage-logo" onclick="location.href='index.html'">
+          <div class="circle circle1"></div>
+          <div class="circle circle2"></div>
+          <h1>MINJEONG</h1>
+        </div>
+        <p>
+          <a href="login.html">
+            login
+            <div class="under-line"></div>
+          </a>
+        </p>
+      </header>
+      <nav id="main-nav" class="nav-hide-position">
+        <ul id="nav-hide">
+          <ul id="close-icon" onclick="showHideNavMenu();">
+            <li class="logo-bar"></li>
+            <li class="logo-bar"></li>
+          </ul>
+          <li id="loginUser-info">
+            <div id="user-img-wrap"></div>
+            <p></p>
+        </li>
+          <li>
+            <a href="about-me.html">about-me</a>
+            <div class="under-line"></div>
+          </li>
+          <li>
+            <a href="travel-log.html">travel-log</a>
+            <div class="under-line"></div>
+          </li>
+          <li>
+            <a href="road-map.html">road-map</a>
+            <div class="under-line"></div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="road-map-wrap">
+      <div class="article-wrap">
+        <section class="wrap-left left-1">
+          <h1>개발언어</h1>
+          <article>
+            <h6>JAVA</h6>
+            <p>Web Frameworks</p>
+            <p>Networking 이해</p>
+            <p>Build Tools</p>
+          </article>
+          <article>
+            <h6>Python</h6>
+            <p>기본문법 익히기</p>
+            <p>Frameworks</p>
+          </article>
+          <article>
+            <h6>JavaScript</h6>
+            <p>React</p>
+            <p>Node.js</p>
+          </article>
+        </section>
+        <section class="wrap-left left-2">
+          <h1>API</h1>
+          <article>
+            <h6>제목..</h6>
+            <p>배울 내용..?</p>
+          </article>
+          <article></article>
+        </section>
+        <section class="wrap-left left-3">
+          <h1>데이터베이스</h1>
+          <article>
+            <h6>RDB</h6>
+            <p>MySQL, Oracle 문법 익히기</p>
+            <p>트랜젝션 처리</p>
+          </article>
+          <article>
+            <h6>제목..</h6>
+            <p>배울 내용..?</p>
+          </article>
+        </section>
+      </div>
+      <div id="road-box">
+        <div id="road-box-head">
+          <button></button>
+        </div>
+        <h1>Backend<br />RoadMap</h1>
+        <div id="road-box-line">
+          <div id="line-direction">
+            <i class="fa-solid fa-angles-down"></i>
+          </div>
+        </div>
+      </div>
+      <div class="article-wrap">
+        <section class="wrap-right right-1">
+          <h1>버전관리</h1>
+          <article>
+            <h6>Github</h6>
+            <p>git 협업</p>
+            <p>Branch 활용</p>
+          </article>
+          <article>
+            <h6>제목..</h6>
+            <p>배울 내용..?</p>
+          </article>
+        </section>
+        <section class="wrap-right right-2">
+        <h1>인터넷/컴퓨터</h1>
+        <article>
+          <h6>컴퓨터의 동작원리</h6>
+          <p>스레드와 동시성</p>
+          <p>메모리</p>
+        </article>
+        <article>
+          <h6>인터넷 이해</h6>
+          <p>도메인, 웹 호스팅</p>
+        </article>
+      </section>
+      <section class="wrap-right right-3">
+        <h1>서버</h1>
+        <article>
+          <h6>Github</h6>
+            <p>배울 내용..?</p>
+        </article>
+        <article>
+          <h6>Github</h6>
+            <p>배울 내용..?</p>
+        </article>
+      </section>
+      <section class="wrap-right right-4">
+        <h1>알고리즘</h1>
+        <article>
+          <h6>Github</h6>
+            <p>배울 내용..?</p>
+        </article>
+        <article>
+          <h6>Github</h6>
+            <p>배울 내용..?</p>
+        </article>
+      </section>
+    </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script>
+      window.addEventListener('scroll', (e) => {
+        console.log(window.scrollY);
+        document.querySelector('#line-direction').style = `transform: translate(-23px, ${window.scrollY}px)`;
+        // if(window.screenY === 100){
+        //   document.querySelector('.article-wrap article').style = 'display: flex';
+        // }
+      });
+    </script>
+  </body>
+</html>

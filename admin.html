@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Admin</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,700;1,900&family=Ubuntu:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/admin.css">
 </head>
+
 <body>
-    <div>
+    <div id="main-background">
         <header id="main-header">
             <ul id="nav-icon" onclick="showHideNavMenu();">
                 <li class="logo-bar"></li>
@@ -24,6 +26,12 @@
                 <div class="circle circle2"></div>
                 <h1>MINJEONG</h1>
             </div>
+            <p>
+                <a href="login.html">
+                    logout
+                    <div class="under-line"></div>
+                </a>
+            </p>
         </header>
         <nav id="main-nav" class="nav-hide-position">
             <ul id="nav-hide">
@@ -31,6 +39,10 @@
                     <li class="logo-bar"></li>
                     <li class="logo-bar"></li>
                 </ul>
+                <li id="loginUser-info">
+                    <div id="user-img-wrap"></div>
+                    <p></p>
+                </li>
                 <li>
                     <a href="about-me.html">about-me</a>
                     <div class="under-line"></div>
@@ -44,29 +56,63 @@
                     <div class="under-line"></div>
                 </li>
             </ul>
-    </nav>
+        </nav>
 
-
-
-
-
-        <div id="login-wrap">
-            <form name="loginFrm" action="javascript:loginUser();">
-                <fieldset id="login">
-                    <legend>Login</legend>
-                    <input type="text" name="id" id="id" placeholder="아이디를 입력하세요" required>
-                    <input type="password" name="pwd" id="pwd" placeholder="비밀번호를 입력하세요" required>
-                    <br>
-                    <button type="submit" id="login-submit">로그인</button>
-                </fieldset>
-            </form>
-            <div id="join-btn">
-                <p><a href="join.html">회원가입</a></p>
+        <section id="user-info">
+            <h1>회원 프로필 상세보기</h1>
+            <div id="user-profile">
+                <section>
+                    <div id="profile-img-wrap">
+                        <img src="" alt="">
+                    </div>
+                    <article id="profile-info-wrap">
+                        <p>회원이름</p>
+                        <p>회원아이디</p>
+                        <p>생년월일</p>
+                        <p>가입일시</p>
+                    </article>
+                </section>
             </div>
+        </section>
+        
+        <div id="member-list-bg">
+
+            <section id="member-list">
+                <h2>전체 회원목록</h2>
+                <table id="member-table">
+                    <thead>
+                        <tr>
+                            <th>선택</th>
+                            <th>번호</th>
+                            <th>아이디</th>
+                            <th>이름</th>
+                            <th>생년월일</th>
+                            <th>전화번호</th>
+                            <th>가입일시</th>
+                            <th>관리자여부</th>
+                        </tr>
+                    </thead>
+                    <tbody id="member-info">
+                        
+                    </tbody>
+                </table>
+    
+            </section>
         </div>
+
+
+
     </div>
 
+
+
+
+
+
+
+
     <script src="js/index.js"></script>
-    <script src="js/login.js"></script>
+    <script src="js/admin.js"></script>
 </body>
+
 </html>

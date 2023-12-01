@@ -237,3 +237,12 @@ header #nav-icon:hover {
 header #nav-icon:hover li {
     background-color: #000;
 }
+
+
+#comment-wrap {
+    background-color: #fff;
+    transform: translateY(100vh);
+}
+#comment-wrap h2 {
+    text-align: center;
+}

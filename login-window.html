@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,700;1,900&family=Ubuntu:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/10d89693f5.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #0b30fb;
+            overflow: hidden;
+        }
+        body > div {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #logout-notice {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        #user-id {
+            font-weight: 600;
+            
+        }
+        p {
+            width: fit-content;
+            font-weight: 400;
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0 0 0 20px;
+            display: inline;
+            font-size: 24px;
+            color: #fff;
+        }
+        #i-wrap {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        i {
+            color: #0b30fb;
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="logout-notice">
+            <div id="i-wrap">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+            <div id="logout-user">
+                <p id="user-id"></p>
+                <p>반갑습니다.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const loginUser = JSON.parse(sessionStorage.getItem('loginUser'));
+        document.querySelector('#user-id').innerText = `${loginUser}님`; 
+
+        setTimeout(() => {
+            window.close();
+        }, 2000);
+
+    </script>
+</body>
+</html>
