@@ -28,7 +28,6 @@ const regTest = (input) => {
             regExp[1].forEach((regExpPwd, i) => {
                 bools[i] = regExpPwd.test(input.value);
             });
-            console.log(bools);
             for(let i = 0; i < bools.length; i ++){
                 if(!bools[i]) return false;
             }
@@ -114,44 +113,37 @@ const openLoginWindow = () => {
 }
 
 // input으로 입력한 값 유효성 검사하기
-document.joinfrm.onsubmit = () => {
+document.joinfrm.addEventListener('submit', (e) => {
+    console.log(e.target);
     const userId = document.querySelector('#id');
     const pwd = document.querySelector('#pwd');
     const pwdConfirm = document.querySelector('#pwdConfirm');
     const name = document.querySelector('#name');
     const phone = shortInputMerge([...document.querySelectorAll('input[name=phone]')]);
+    
     // 1. 아이디 검사
-    if(!regExp[0].test(userId.value)) {
-        console.log(regExp[0].test(userId.value));
-        return false;
+    if(!(regExp[0].test(userId.value) && idIsValid(userId.value))) {
+        e.preventDefault();
     }
-
+    
     // 2. 비밀번호 검사
+    // console.log(!regExpPwd.test(pwd.value));
     regExp[1].forEach((regExpPwd) => {
-        if(!regExpPwd.test(pwd.value))
-            return false;
+        if(!regExpPwd.test(pwd.value)){
+            e.preventDefault();
+        }
     });
-
+    
     // 3. 비밀번호 일치여부 검사
-    if(!pwd.value === pwdConfirm.value) {
-        console.log(!pwd.value === pwdConfirm.value);
-        return false;
+    if(!(pwd.value === pwdConfirm.value)) {
+        e.preventDefault();
     }
-
+    
     // 4. 이름 검사
     if(!regExp[2].test(name.value)) {
-        return false;
+        e.preventDefault();
     }
-
-    // // 5. 생년월일 검사
-    // if(regExp[2].test(userId.value)) {
-    //     return false;
-    // }
-    // 5. 핸드폰 번호 검사
-    // if(!regExp[3].test(phone)) {
-    //     return false;
-    // }
-};
+});
 
 
 
