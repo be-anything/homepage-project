@@ -141,6 +141,7 @@ header #nav-icon {
     
     cursor: pointer;
 }
+
 header #nav-icon > li {
     margin: 5px;
     width: 50%;
@@ -208,8 +209,32 @@ nav ul#nav-hide {
     justify-content: center;
     text-align: center;
 }
-
-
+nav ul#nav-hide #loginUser-info {
+    width: 200px;
+    height: 220px;
+    margin-bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 50px rgba(0, 0, 0, .3);
+    align-content: center;
+    border-radius: 20px;
+}
+nav ul#nav-hide #loginUser-info div {
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    background-size: cover;
+}
+nav ul#nav-hide #loginUser-info p {
+    font-size: 20px;
+    font-style: normal;
+    margin-top: 10px;
+    color: #0b30fb;
+}
 
 nav ul#nav-hide > #close-icon {
     width: 80px;

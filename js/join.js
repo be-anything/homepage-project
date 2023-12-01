@@ -4,11 +4,25 @@
 // sub3 : 사용 가능시 노출
 // sub4 : 사용 불가시 노출
 
+const idIsValid = (userId) => {
+    const members = JSON.parse(localStorage.getItem('members')) || [];
+    // console.log(members);
+    let bool = true;
+    for(let i = 0; i < members.length; i++){
+        const {id} = members[i];
+        if(id === userId){
+            // 동일한 아이디있으면 false반환
+            bool = false;
+            break;
+        } 
+    }
+    return bool;
+}
 const regExp = [/^[a-zA-Z0-9]{4,12}$/, [/^.{8,16}$/, /\d/, /[a-zA-Z]/, /[!@#$%^&*()]/], /^[가-힣]{2,}$/, /^010[0-9]{8}$/];
 const regTest = (input) => {
     switch(input.id){
         case "id" : 
-        return regExp[0].test(input.value);   
+        return regExp[0].test(input.value) && idIsValid(input.value);   
         case "pwd" : 
         let bools = [];
             regExp[1].forEach((regExpPwd, i) => {
@@ -57,20 +71,55 @@ const inputSubEvent = (input, i) => {
 });
 
 
-const printResult = () => {
-    console.log('왜 안돼');
+
+
+
+class Member {
+    constructor(id, pwd, name, birth, phone, createdAt = Date.now(), isManager = false, profile = `https://source.boringavatars.com/beam/300/${id}`) {
+        this.id = id;
+        this.pwd = pwd;
+        this.name = name;
+        this.birth = birth;
+        this.phone = phone;
+        this.createdAt = createdAt;
+        this.isManager = isManager;
+        this.profile = profile;
+        // 기본 이미지 생성
+    };
+};
+const saveMemberInfo = () => {
+    const userId = document.querySelector('#id');
+    const pwd = document.querySelector('#pwd');
+    const name = document.querySelector('#name');
+    const birth = shortInputMerge([...document.querySelectorAll('input[name=birth]')]);
+    const phone = shortInputMerge([...document.querySelectorAll('input[name=phone]')]);
+    
+    const members = JSON.parse(localStorage.getItem('members')) || [];
+    members.push(new Member(userId.value, pwd.value, name.value, birth, phone));
+
+    // 내 관리자 계정
+    // members.push(new Member('admin', 'admin123*', '관리자', '19930727', '01025326864', Date.now(), true));
+    // console.log(members);
+
+    localStorage.setItem('members', JSON.stringify(members));
+
+    // 초기화
+    document.joinfrm.reset();
+    openLoginWindow()();
 }
 
+const openLoginWindow = () => {
+    open('../join-window.html', 'join', 'width=500, height=300, top=400, left=400');
+    return window.location.href = "../login.html";
+}
 
 // input으로 입력한 값 유효성 검사하기
-document.querySelector('#join-submit').onclick = () => {
+document.joinfrm.onsubmit = () => {
     const userId = document.querySelector('#id');
     const pwd = document.querySelector('#pwd');
     const pwdConfirm = document.querySelector('#pwdConfirm');
     const name = document.querySelector('#name');
-    // const birth = shortInputMerge([...document.querySelectorAll('input[name=birth]')]);
     const phone = shortInputMerge([...document.querySelectorAll('input[name=phone]')]);
-
     // 1. 아이디 검사
     if(!regExp[0].test(userId.value)) {
         console.log(regExp[0].test(userId.value));
@@ -91,7 +140,6 @@ document.querySelector('#join-submit').onclick = () => {
 
     // 4. 이름 검사
     if(!regExp[2].test(name.value)) {
-        console.log(regExp[2].test(name.value));
         return false;
     }
 
@@ -100,14 +148,13 @@ document.querySelector('#join-submit').onclick = () => {
     //     return false;
     // }
     // 5. 핸드폰 번호 검사
-    if(!regExp[3].test(phone)) {
-        console.log(phone);
-        console.log(regExp[3].test(phone));
-        return false;
-    }
-
-    printResult(); // localStorage에 저장하도록 변경
+    // if(!regExp[3].test(phone)) {
+    //     return false;
+    // }
 };
+
+
+
 
 // 생년월일과 핸드폰 번호 문자열 합치기
 const shortInputMerge = (inputs) => {

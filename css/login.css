@@ -289,3 +289,64 @@ nav ul#nav-hide > li:hover .under-line {
         opacity: 1;
     }
 }
+
+
+div#login-wrap {
+    transform: translateY(180px);
+    /* background-color: #000; */
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+fieldset#login {
+    width: 500px;
+    height: 300px;
+    
+    border: 0;
+    margin: 0 auto;
+}
+#login legend {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+#login input {
+    padding: 20px 50px;
+    margin: 0 0 10px;
+    width: 300px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 30px;
+}
+#login button {
+    cursor: pointer;
+
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 400px;
+    height: 60px;
+    border: 0;
+    background-color: #000;
+    color: #fff;
+}
+#login button:hover {
+    background-color: #0b30fb;
+    transition-duration: .3s;
+}
+
+#join-btn p {
+    font-weight: bold;
+    margin: 0 auto;
+    width: fit-content;
+    cursor: pointer;
+}
+#join-btn p:hover {
+    border-bottom: 2px solid #000;
+}
+#join-btn p a {
+    text-decoration: none;
+    color: #000;
+}
+#login input::placeholder {
+font-family: 'Noto Sans KR', sans-serif;
+font-size: 16px;
+}
