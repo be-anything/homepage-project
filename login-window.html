@@ -67,7 +67,7 @@
     </div>
     <script>
         const loginUser = JSON.parse(sessionStorage.getItem('loginUser'));
-        document.querySelector('#user-id').innerText = `${loginUser}님`; 
+        document.querySelector('#user-id').innerText = `${loginUser.id}님`; 
 
         setTimeout(() => {
             window.close();

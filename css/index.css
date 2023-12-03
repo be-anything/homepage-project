@@ -210,8 +210,8 @@ nav ul#nav-hide {
     text-align: center;
 }
 nav ul#nav-hide #loginUser-info {
-    width: 200px;
-    height: 220px;
+    width: 150px;
+    height: 180px;
     margin-bottom: 0;
     display: none;
     justify-content: center;
@@ -223,8 +223,8 @@ nav ul#nav-hide #loginUser-info {
     border-radius: 20px;
 }
 nav ul#nav-hide #loginUser-info div {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     background-color: #fff;
     border-radius: 50%;
     background-size: cover;
@@ -480,4 +480,24 @@ nav ul#nav-hide > li:hover .under-line {
 #main-section section p {
     font-size: 56px;
     line-height: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+#footer-wrap {
+    width: 100%;
+    height: 110px;
+    background-color: #000;
+    color: rgba(255, 255, 255, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Sans KR', sans-serif;;
 }

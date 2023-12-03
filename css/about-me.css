@@ -216,6 +216,7 @@ aside > section > ul a {
 /* index-recoloring */
 body {
     background-color: #000;
+    overflow-y: hidden;
 }
 
 header#main-header p a {
@@ -245,4 +246,11 @@ header #nav-icon:hover li {
 }
 #comment-wrap h2 {
     text-align: center;
+}
+
+
+#footer-wrap {
+    height: fit-content;
+    position: absolute;
+    bottom: -890px;
 }

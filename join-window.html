@@ -65,13 +65,12 @@
             </div>
         </div>
     </div>
+    <script src="js/memberQuery.js"></script>
     <script>
         // 가장 마지막에 등록된 유저이름 가져오기
-
-        const members = JSON.parse(localStorage.getItem('members'));
+        const members = $("members");
         const {id} = members[members.length-1];
         
-        // const loginUser = JSON.parse(sessionStorage.getItem('loginUser'));
         document.querySelector('#user-id').innerText = `${id}님`; 
     
         setTimeout(() => {

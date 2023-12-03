@@ -1,0 +1,174 @@
+header#main-header p {
+    margin: 0 48px 0 auto;
+}
+header#main-header .under-line {
+    width: 57px;
+}
+
+body {
+    margin-bottom: 200px;
+    overflow-x: hidden;
+}
+
+#user-info {
+    width: 40vw;
+    height: 350px;
+    /* border: 1px solid #0b30fb; */
+    background-color: #fff;
+    /* box-shadow: 0 0 50px rgba(11, 48, 251, .5), 0 0 1px rgba(0, 0, 0, 1); */
+    border-radius: 30px;
+    margin: 100px auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+#user-info #user-profile {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+}
+
+#user-info h1 {
+    width: 100%;
+    /* line-height: 20px; */
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;
+}
+#user-profile section {
+    width: fit-content;
+    display: flex;
+    margin: 0 auto;
+}
+#user-info #profile-img-wrap {
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    border-radius: 50%;
+    /* overflow: hidden; */
+    margin-right: 30px;
+}
+
+#user-info #profile-img-wrap img {
+    width: 100%;
+}
+
+#user-info #profile-info-wrap{
+    width: 250px;
+    height: 200px;
+    background-color: #fff;
+}
+#user-info #profile-info-wrap p {
+    width: 100%;
+    /* height: 24px; */
+    padding: 5px 0 5px 0px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 25px;
+    text-align: center;
+}
+
+
+/* 쪽지함 */
+.message {
+    width: 60vw;
+    height: fit-content;
+    border: 2px dashed rgba(0, 0, 0, .3);
+    padding: 20px 10px;
+    margin: 100px auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: rgba(0, 0, 0, .1);
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.message:hover {
+    border: 2px solid #000;
+    background-color: #fff;
+    
+}
+
+.message legend {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+.message table {
+    width: 60vw;
+    height: 100%;
+    border-spacing: 12px;
+}
+.message table th {
+    border: 2px solid #000;
+    color: #fff;
+    background-color: #000;
+}
+.message table td {
+    width: 40vw;
+}
+#sub-btn {
+    width: fit-content;
+    background-color: rgba(11, 48, 251, 1);
+    border: 0;
+    cursor: pointer;
+}
+input:first-child{
+    padding: 15px 0;
+    border: 0;
+    width: 100%;
+    font-size: 16px;
+    border-bottom: 2px solid #000;
+    background-color: transparent;
+    width: 40vw;
+}
+input[type=submit] {
+    padding: 0;
+    width: 50px;
+    border: 0;
+    background-color: transparent;
+    font-weight: 600;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #fff;
+}
+textarea {
+    width: 40vw;
+    border: 0;
+    border-bottom: 2px solid #000;
+    background-color: transparent;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+}
+::placeholder {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    
+}
+
+
+/* 받은 쪽지함 */
+tbody {
+    text-align: center;
+}
+tbody td:nth-child(2){
+    cursor: pointer;
+}
+#content-cell {
+    width: 60%;
+}
+tfoot {
+    border-spacing: 0;
+}
+#content-detail {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px dashed rgba(0, 0, 0, .3);
+}

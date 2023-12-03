@@ -14,7 +14,6 @@ const covertToDateTime = (millis) => {
 };
 
 const printAllMember = () => {
-    // const {} = JSON.parse(localStorage.getItem('members'));
     const members = JSON.parse(localStorage.getItem('members'));
     document.querySelector('#member-info').innerHTML =
         members.reduce((html, { id, name, birth, phone, createdAt, isManager }, i) => {
@@ -38,7 +37,6 @@ const printAllMember = () => {
 
 printAllMember();
 
-
 document.querySelectorAll('input[name=selectUser]').forEach((input, i) => {
     input.addEventListener('click', (e) => {
         printSelectMember(e);
@@ -49,43 +47,28 @@ document.querySelectorAll('input[name=selectUser]').forEach((input, i) => {
 
 const printSelectMember = (e) => {
     const selectId = e.target.parentElement.parentElement.cells[2].innerHTML;
-    const members = JSON.parse(localStorage.getItem('members'));
+    const $member = $('members').getMember(selectId);
 
-    let selectIdIndex;
-    // id만 순회해서 찾아오기
-    members.forEach(({ id }, i) => {
-        if (id === selectId)
-            selectIdIndex = i;
-    })
-    const { name, id, birth, createdAt, profile } = members[selectIdIndex];
+
+    const { name, id, birth, createdAt, profile } = $member;
+    const isBirth = birth ? birth : "생년월일 미등록";
     document.querySelector('#profile-info-wrap').innerHTML = `
         <p><strong>이름</strong> : ${name}</p>
         <p><strong>아이디</strong> : ${id}</p>
-        <p><strong>생년월일</strong> : ${birth}</p>
+        <p><strong>생년월일</strong> : ${isBirth}</p>
         <p><strong>가입일시</strong> : ${covertToDateTime(createdAt)}</p>
         `;
     document.querySelector('#profile-img-wrap').innerHTML = `
     <img src="${profile}" alt="${id}유저의 프로필사진">`;
 };
 
-
-
-
-// 기본으로 1번 찾아오게 하기 - 코드 통합/리팩토링 필요
 (() => {
     const check = document.querySelector('#member-info tr td input');
     check.checked = true;
     const selectId = check.parentElement.parentElement.cells[2].innerHTML;
 
-    const members = JSON.parse(localStorage.getItem('members'));
-
-    let selectIdIndex;
-    // id만 순회해서 찾아오기
-    members.forEach(({ id }, i) => {
-        if (id === selectId)
-            selectIdIndex = i;
-    })
-    const { name, id, birth, createdAt, profile } = members[selectIdIndex];
+    const $member = $('members').getMember(selectId);
+    const { name, id, birth, createdAt, profile } = $member;
 
     document.querySelector('#profile-info-wrap').innerHTML = `
     <p><strong>이름</strong> : ${name}</p>

@@ -65,7 +65,7 @@
     </div>
 
     <div id="road-map-wrap">
-      <div class="article-wrap">
+      <div class="article-wrap article-wrap-left">
         <section class="wrap-left left-1">
           <h1>개발언어</h1>
           <article>
@@ -86,25 +86,36 @@
           </article>
         </section>
         <section class="wrap-left left-2">
-          <h1>API</h1>
-          <article>
-            <h6>제목..</h6>
-            <p>배울 내용..?</p>
-          </article>
-          <article></article>
-        </section>
-        <section class="wrap-left left-3">
           <h1>데이터베이스</h1>
           <article>
             <h6>RDB</h6>
-            <p>MySQL, Oracle 문법 익히기</p>
-            <p>트랜젝션 처리</p>
+            <p>MySQL</p>
+            <p>Oracle</p>
           </article>
           <article>
-            <h6>제목..</h6>
-            <p>배울 내용..?</p>
+            <h6>NoSQL DB</h6>
+            <p>MongoDB</p>
+          </article>
+          <article>
+            <h6>트랜젝션 / 정규화</h6>
           </article>
         </section>
+        <section class="wrap-left left-3">
+          <h1>개발원칙 / 패턴</h1>
+        <article>
+          <h6>Clean Code 작성규칙</h6>
+          <p>일관성 / Naming / 들여쓰기 등</p>
+        </article>
+        <article>
+          <h6>객체지향 프로그래밍</h6>
+        </article>
+        <article>
+          <h6>개발 디자인 패턴</h6>
+        </article>
+        <article>
+            <h6>아키텍처 패턴</h6>
+          </article>
+          </section>
       </div>
       <div id="road-box">
         <div id="road-box-head">
@@ -117,7 +128,7 @@
           </div>
         </div>
       </div>
-      <div class="article-wrap">
+      <div class="article-wrap article-wrap-right">
         <section class="wrap-right right-1">
           <h1>버전관리</h1>
           <article>
@@ -125,57 +136,60 @@
             <p>git 협업</p>
             <p>Branch 활용</p>
           </article>
-          <article>
-            <h6>제목..</h6>
-            <p>배울 내용..?</p>
-          </article>
         </section>
         <section class="wrap-right right-2">
-        <h1>인터넷/컴퓨터</h1>
+        <h1>OS / 인터넷 지식</h1>
         <article>
-          <h6>컴퓨터의 동작원리</h6>
+          <h6>OS 지식</h6>
+          <p>CPU / 메모리관리 / IO / 네트워크</p>
           <p>스레드와 동시성</p>
-          <p>메모리</p>
+          <p>터미널 사용법</p>
         </article>
         <article>
           <h6>인터넷 이해</h6>
-          <p>도메인, 웹 호스팅</p>
+          <p>인터넷의 작동 원리</p>
+          <p>도메인 / 웹 호스팅</p>
+          <p>브라우저 / HTTP</p>
         </article>
       </section>
       <section class="wrap-right right-3">
-        <h1>서버</h1>
+        <h1>API</h1>
         <article>
-          <h6>Github</h6>
-            <p>배울 내용..?</p>
+          <h6>API 인증</h6>
+            <p>토큰 인증 / OAuth</p>
         </article>
         <article>
-          <h6>Github</h6>
-            <p>배울 내용..?</p>
+          <h6>REST</h6>
         </article>
+        <article>
+          <h6>JSON API</h6>
+        </article>
+        
       </section>
       <section class="wrap-right right-4">
-        <h1>알고리즘</h1>
+        <h1>웹서버</h1>
         <article>
-          <h6>Github</h6>
-            <p>배울 내용..?</p>
+          <h6>하드웨어</h6>
         </article>
         <article>
-          <h6>Github</h6>
-            <p>배울 내용..?</p>
+          <h6>소프트웨어</h6>
         </article>
+        
       </section>
     </div>
-    </div>
 
+    
+  </div>
+  <div id="footer-wrap">
+    <footer>
+        <p>&copy; Copyright 2023, Lee MinJeong - All Rights Reserved</p>
+    </footer>
+  </div>
+    
+
+    
+    <script src="js/memberQuery.js"></script>
     <script src="js/index.js"></script>
-    <script>
-      window.addEventListener('scroll', (e) => {
-        console.log(window.scrollY);
-        document.querySelector('#line-direction').style = `transform: translate(-23px, ${window.scrollY}px)`;
-        // if(window.screenY === 100){
-        //   document.querySelector('.article-wrap article').style = 'display: flex';
-        // }
-      });
-    </script>
+    <script src="js/road-map.js"></script>
   </body>
 </html>

@@ -1,40 +1,33 @@
 const findMember = (inputId, inputPwd) => {
     let result = false;
-    const members = JSON.parse(localStorage.getItem('members'));
+    const $member = $("members").getMember(inputId);
     
-    if(members === null)
+    if($member === undefined){
         return result;
+    }
 
-    members.forEach(({ id, pwd }) => {
-        if (id === inputId) {
-            if (pwd === inputPwd) {
-                result = true;
-            }
+    if($member.id === inputId) {
+        if($member.pwd === inputPwd){
+            result = true;
         }
-    });
+    }
     return result;
 };
 
-
 const loginUser = () => {
     const id = document.querySelector('#id');
-    sessionStorage.setItem('loginUser', JSON.stringify(id.value));
+    sessionStorage.setItem('loginUser', JSON.stringify($("members").getMember(id.value)));
     openLoginWindow()();
 };
-
 
 const openLoginWindow = () => {
     open('../login-window.html', 'logout', 'width=500, height=300, top=400, left=400');
     return window.location.href = "../index.html";
 }
 
-
-
-
 document.loginFrm.addEventListener('submit', (e) => {
     const id = document.querySelector('#id');
     const pwd = document.querySelector('#pwd');
-
 
     if (findMember(id.value, pwd.value)) {
         // loginUser(id.value);

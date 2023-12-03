@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>UserPage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,700;1,900&family=Ubuntu:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/userPage.css">
 </head>
-
 <body>
     <div id="main-background">
         <header id="main-header">
@@ -59,11 +57,10 @@
         </nav>
 
         <section id="user-info">
-            <h1>회원 프로필 상세보기</h1>
+            <h1>내 프로필</h1>
             <div id="user-profile">
                 <section>
                     <div id="profile-img-wrap">
-                        <img src="" alt="">
                     </div>
                     <article id="profile-info-wrap">
                         <p>회원이름</p>
@@ -75,30 +72,48 @@
             </div>
         </section>
         
-        <div id="member-list-bg">
-
-            <section id="member-list">
-                <h2>전체 회원목록</h2>
-                <table id="member-table">
+        <section id="send-message" class="message">
+            <form name="sendMessageFrm">
+                <legend>쪽지 보내기</legend>
+                <table>
+                        <tr>
+                            <th>받는 사람</th>
+                            <td><input type="text" name="receive-user" placeholder="받는 사람의 아이디를 입력하세요."></td>
+                            <th rowspan="2" id="sub-btn"><input type="submit" value="send"></th>
+                        </tr>
+                            <tr>
+                                <th>쪽지 내용</th>
+                                <td>
+                                    <textarea id="message-content" cols="30" rows="10" placeholder="쪽지 내용을 입력하세요."></textarea>
+                                </td>
+                            </tr>
+                    </table>
+            </form>
+        </section>
+        <section id="inbox-message" class="message">
+            <form name="inboxMessageFrm">
+                <legend>받은 쪽지함</legend>    
+                <table>
                     <thead>
                         <tr>
-                            <th>선택</th>
                             <th>번호</th>
-                            <th>아이디</th>
-                            <th>이름</th>
-                            <th>생년월일</th>
-                            <th>전화번호</th>
-                            <th>가입일시</th>
-                            <th>관리자여부</th>
+                            <th id="content-cell">쪽지 내용</th>
+                            <th>보낸 사람</th>
+                            <th>보낸 시간</th>
                         </tr>
                     </thead>
-                    <tbody id="member-info">
-                        
+                    <tbody id="message-list">
+
                     </tbody>
+                    <tfoot>
+                        <th>자세히 보기</th>
+                        <tr>
+                            <td colspan="4" id="content-detail"></td>
+                        </tr>
+                    </tfoot>
                 </table>
-    
-            </section>
-        </div>
+            </form>
+        </section>
 
         <div id="footer-wrap">
             <footer>
@@ -116,7 +131,6 @@
 
     <script src="js/memberQuery.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/admin.js"></script>
+    <script src="js/userPage.js"></script>
 </body>
-
 </html>

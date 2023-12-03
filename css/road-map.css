@@ -22,7 +22,7 @@ header #nav-icon:hover li {
 
 /* roadmap */
 #road-map-wrap {
-    margin: 50px 0;
+    margin: 50px 0 200px;
     display: flex;
     justify-content: center;
     /* align-items: center;   */
@@ -32,7 +32,32 @@ header #nav-icon:hover li {
     margin-top: 250px;
     width: 500px;
     /* height: fit-content; */
+    perspective: 2500px;
+    opacity: 0;
+    animation: article-wrap-animation 1s ease-in both;
+    animation-delay: 1.8s;
 }
+@keyframes article-wrap-animation {
+    0% {
+        transform: translate(0, 10em);
+    }
+    25% {
+
+    }
+    50% {
+        opacity: 1;
+    }
+    60% {
+        transform: translate(0, -1em) scale(100.2%);
+    }
+    75% {
+    }
+    100% {
+        transform: translate(0, 0em) scale(100%);
+        opacity: 1;
+    }
+}
+
 
 .article-wrap article {
     width: 250px;
@@ -64,6 +89,24 @@ header #nav-icon:hover li {
     justify-content: flex-start;
     align-content: center;
 }
+
+.article-wrap-left section {
+    transform: rotateY(20deg) scale(94%);
+}
+.article-wrap-right section{
+    transform: rotateY(-20deg) scale(94%);
+}
+
+.article-wrap section:hover {
+    box-shadow: 0 0 40px rgba(255, 255, 255, .8);
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
+    transform: rotateY(0deg) scale(100%);
+}
+
+
+
+
 .article-wrap section:nth-child(2n) {
     border: 5px solid #ff00a1;
 }
@@ -126,6 +169,18 @@ header #nav-icon:hover li {
     text-align: center;
     height: 200px;
     background-color: #0b30fb;
+
+    opacity: 0;
+    animation: road-box-animation 1s ease-in forwards;
+    animation-delay: .5s;
+}
+@keyframes road-box-animation {
+    0% {
+
+    }
+    100% {
+        opacity: 1;
+    }
 }
 #road-box #road-box-head {
     width: 100%;
@@ -158,17 +213,58 @@ header #nav-icon:hover li {
 }
 #road-box-line {
     width: 5px;
-    height: 200vh;
+    height: 0%;
     background-color: #fff;
     margin: 0 auto;
+    animation: line-animation 3s ease-in forwards;
+    animation-delay: 1.5s;
+}
+@keyframes line-animation {
+    0% {
+        height: 0%;
+    }
+    25% {
+
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        height: 530%;
+        opacity: 1;
+    }
+    100% {
+        height: 530%;
+        opacity: 1;
+    }
 }
 #line-direction {
     width: 50px;
     height: 50px;
     background-color: rgba(0, 0, 0, 1);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    border: 3px solid #fff;
     border-radius: 50%;
-    transform: translateX(-23px);
+    transform: translate(-25px, 30px);
+    
+    opacity: 0;
+    animation: arrow-box-animation 2s ease-in-out both;
+    animation-delay: 2s;
+}
+#line-direction:hover {
+    background-color: #0b30fb;
+    transition-duration: .2s;
+}
+@keyframes arrow-box-animation {
+    0% {
+
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-25px, 40px);
+    }
+    100% {
+        opacity: 1;
+    }
 }
 #line-direction i {
     color: #fff;
@@ -189,9 +285,14 @@ header #nav-icon:hover li {
         transform: translateY(10px);
     }
     75% {
-        opacity: 0;
     }
     100% {
         transform: translateY(-2px);
     }
+}
+
+
+#footer-wrap {
+    background-color: rgba(255, 255, 255, .8);
+    color: rgba(0, 0, 0, .8);
 }

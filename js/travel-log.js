@@ -35,6 +35,8 @@ const addBtn3Click = (btn) => {btn.addEventListener('click', (e) => {
     addBtn3Click(btn);
 });
 
+
+
 const btnColor = (e) => {
     const btns = [...e.target.parentElement.children];
     btns.forEach((btn) => {

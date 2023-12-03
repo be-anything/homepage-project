@@ -5,8 +5,7 @@
 // sub4 : 사용 불가시 노출
 
 const idIsValid = (userId) => {
-    const members = JSON.parse(localStorage.getItem('members')) || [];
-    // console.log(members);
+    const members = $('members') || [];
     let bool = true;
     for(let i = 0; i < members.length; i++){
         const {id} = members[i];
@@ -46,7 +45,6 @@ const inputSubEvent = (input, i) => {
             e.target.nextElementSibling.style = 'display: inline';
         }
         else {
-            // console.dir(e.target);
             if(regTest(e.target)){
                 e.target.nextElementSibling.nextElementSibling.nextElementSibling.style = 'display: inline';
             }
@@ -71,8 +69,6 @@ const inputSubEvent = (input, i) => {
 
 
 
-
-
 class Member {
     constructor(id, pwd, name, birth, phone, createdAt = Date.now(), isManager = false, profile = `https://source.boringavatars.com/beam/300/${id}`) {
         this.id = id;
@@ -86,6 +82,7 @@ class Member {
         // 기본 이미지 생성
     };
 };
+
 const saveMemberInfo = () => {
     const userId = document.querySelector('#id');
     const pwd = document.querySelector('#pwd');
@@ -93,12 +90,17 @@ const saveMemberInfo = () => {
     const birth = shortInputMerge([...document.querySelectorAll('input[name=birth]')]);
     const phone = shortInputMerge([...document.querySelectorAll('input[name=phone]')]);
     
-    const members = JSON.parse(localStorage.getItem('members')) || [];
+    const members = JSON.parse(localStorage.getItem("members")) || [];
     members.push(new Member(userId.value, pwd.value, name.value, birth, phone));
 
-    // 내 관리자 계정
+    // 내 관리자 계정 및 테스트 계정 셋팅
     // members.push(new Member('admin', 'admin123*', '관리자', '19930727', '01025326864', Date.now(), true));
-    // console.log(members);
+    // members.push(new Member('hojun', 'hajun123*', '유호준', '19961006', '01015641234'));
+    // members.push(new Member('young12', 'young12*', '오영희', '19980123', '01078451258'));
+    // members.push(new Member('leess', 'leess123*', '이순신', '19930607', '01028649648'));
+    // members.push(new Member('jong', 'jong123*', '박은종', '19981010', '01059786548'));
+    // members.push(new Member('nannam', 'nannam123*', '남궁성', '19910610', '01012871659'));
+    // members.push(new Member('dahae', 'dahae123*', '정다하', '19920329', '01078453549'));
 
     localStorage.setItem('members', JSON.stringify(members));
 
@@ -114,12 +116,10 @@ const openLoginWindow = () => {
 
 // input으로 입력한 값 유효성 검사하기
 document.joinfrm.addEventListener('submit', (e) => {
-    console.log(e.target);
     const userId = document.querySelector('#id');
     const pwd = document.querySelector('#pwd');
     const pwdConfirm = document.querySelector('#pwdConfirm');
     const name = document.querySelector('#name');
-    const phone = shortInputMerge([...document.querySelectorAll('input[name=phone]')]);
     
     // 1. 아이디 검사
     if(!(regExp[0].test(userId.value) && idIsValid(userId.value))) {
@@ -146,14 +146,10 @@ document.joinfrm.addEventListener('submit', (e) => {
 });
 
 
-
-
 // 생년월일과 핸드폰 번호 문자열 합치기
 const shortInputMerge = (inputs) => {
     return inputs.reduce((merge, input) => {
         merge += input.value;
-        // console.log(merge);
-        // console.log(input.value);
         return merge;
     }, "")
 }
