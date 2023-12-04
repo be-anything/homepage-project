@@ -94,13 +94,13 @@ const saveMemberInfo = () => {
     members.push(new Member(userId.value, pwd.value, name.value, birth, phone));
 
     // 내 관리자 계정 및 테스트 계정 셋팅
-    // members.push(new Member('admin', 'admin123*', '관리자', '19930727', '01025326864', Date.now(), true));
-    // members.push(new Member('hojun', 'hajun123*', '유호준', '19961006', '01015641234'));
-    // members.push(new Member('young12', 'young12*', '오영희', '19980123', '01078451258'));
-    // members.push(new Member('leess', 'leess123*', '이순신', '19930607', '01028649648'));
-    // members.push(new Member('jong', 'jong123*', '박은종', '19981010', '01059786548'));
-    // members.push(new Member('nannam', 'nannam123*', '남궁성', '19910610', '01012871659'));
-    // members.push(new Member('dahae', 'dahae123*', '정다하', '19920329', '01078453549'));
+    members.push(new Member('admin', 'admin123*', '관리자', '19930727', '01025326864', Date.now(), true));
+    members.push(new Member('hojun', 'hajun123*', '유호준', '19961006', '01015641234'));
+    members.push(new Member('young12', 'young12*', '오영희', '19980123', '01078451258'));
+    members.push(new Member('leess', 'leess123*', '이순신', '19930607', '01028649648'));
+    members.push(new Member('jong', 'jong123*', '박은종', '19981010', '01059786548'));
+    members.push(new Member('nannam', 'nannam123*', '남궁성', '19910610', '01012871659'));
+    members.push(new Member('dahae', 'dahae123*', '정다하', '19920329', '01078453549'));
 
     localStorage.setItem('members', JSON.stringify(members));
 
