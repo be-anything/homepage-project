@@ -1,5 +1,4 @@
-
-// 회원목록 관련
+// 회원 한명 찾아오기 용이하려고 만듬
 const $ = (selector) => {
     return new MemberQuery(selector);
 }
