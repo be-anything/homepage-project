@@ -93,6 +93,7 @@ const saveMemberInfo = () => {
     const members = JSON.parse(localStorage.getItem("members")) || [];
     members.push(new Member(userId.value, pwd.value, name.value, birth, phone));
 
+    // 내 관리자 계정 및 테스트 계정 셋팅
     localStorage.setItem('members', JSON.stringify(members));
 
     // 초기화
@@ -145,3 +146,16 @@ const shortInputMerge = (inputs) => {
     }, "")
 }
 
+// 관리자 계정 셋팅
+(() => {
+    const members = JSON.parse(localStorage.getItem("members")) || [];
+    
+    // 내 관리자 계정 및 테스트 계정 셋팅
+    // 이미 셋팅되어있으면 return
+    if($('members').getMember('admin')){
+        return;
+    }
+
+    members.push(new Member('admin', 'admin123*', '관리자', '19930727', '01025326864', Date.now(), true));
+    localStorage.setItem('members', JSON.stringify(members));
+})()
