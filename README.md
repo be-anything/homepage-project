@@ -1,5 +1,5 @@
 # 개인 홈페이지 프로젝트
----
+👉🏻[홈페이지 보기](https://be-anything.github.io/homepage-project/)
 
 ## 📍 프로젝트 소개
 html, css, js로 개인 홈페이지를 제작했습니다.
