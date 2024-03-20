@@ -22,7 +22,7 @@ const loginUser = () => {
 
 const openLoginWindow = () => {
     open('../login-window.html', 'logout', 'width=500, height=300, top=400, left=400');
-    return window.location.href = "../index.html";
+    return window.location.href = "../homepage-project/index.html";
 }
 
 document.loginFrm.addEventListener('submit', (e) => {

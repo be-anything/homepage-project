@@ -103,7 +103,7 @@ const saveMemberInfo = () => {
 
 const openLoginWindow = () => {
     open('../join-window.html', 'join', 'width=500, height=300, top=400, left=400');
-    return window.location.href = "../login.html";
+    return window.location.href = "../homepage-project/login.html";
 }
 
 // input으로 입력한 값 유효성 검사하기
