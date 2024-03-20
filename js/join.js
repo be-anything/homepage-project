@@ -102,7 +102,7 @@ const saveMemberInfo = () => {
 }
 
 const openLoginWindow = () => {
-    open('../join-window.html', 'join', 'width=500, height=300, top=400, left=400');
+    open('../homepage-project/join-window.html', 'join', 'width=500, height=300, top=400, left=400');
     return window.location.href = "../homepage-project/login.html";
 }
 

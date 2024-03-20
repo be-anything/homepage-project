@@ -9,7 +9,7 @@ const hideNavMenu = () => {
 
 
 const openLogoutWindow = () => {
-    const logoutWindow = open('../logout-window.html', 'logout', 'width=500, height=300, top=400, left=400');
+    const logoutWindow = open('../homepage-project/logout-window.html', 'logout', 'width=500, height=300, top=400, left=400');
     // 기존 창 reload
     logoutWindow.opener.location.reload();
 };
@@ -70,7 +70,7 @@ const logoutBtnAddEvent = () => {
         const nav = document.querySelector('#nav-hide');
         const li = document.createElement('li');
         li.innerHTML = `
-        <a href="../admin.html">membership</a>
+        <a href="../homepage-project/admin.html">membership</a>
         <div class="under-line"></div>
         `;
         nav.append(li);
@@ -93,5 +93,5 @@ const logoutBtnAddEvent = () => {
 
 
 document.querySelector("#loginUser-info").addEventListener('click', () => {
-    open('../userPage.html', '_self');
+    open('../homepage-project/userPage.html', '_self');
 })
